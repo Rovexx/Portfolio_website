@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Inspector Gadget</h1>
-          <h3>API generated debugger interface voor Philips Hue</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>API generated debugger interface voor Philips Hue</h3>
+          <?php } else { ?>
+            <h3>API generated debugger interface for Philips Hue</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Voor de Api van Philips Hue is momenteel geen goede developer ervaring. 
               De documentatie is niet gemakkelijk te volgen en er mist een hoop informatie. Ook is er geen makkelijke manier om met de Api te testen.<br>
@@ -34,6 +39,27 @@
               Debugger gegenereerd vanuit Api specificatie<br>
               Autocompletion gegenereerd vanuit Api specificatie
             </p>
+          <?php } else { ?>
+            <p>
+              There is currently no good developer experience for the Philips Hue API.
+              The documentation is not easy to follow and a lot of information is missing. Also, there is no easy way to test with the Api.<br>
+              For this I went together with a fellow intern to make an application that had to improve this developer experience.
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I was going to create a tool that generates an interactive documentation of the API.
+              for this, a RAML file is read, which then creates an interface that a developer can use to test and discover the API.<br>
+              The beauty of this system is that the tool itself does not need to be modified if the API changes. The tool is generated from a structure file of the API.<br>
+              The tool also immediately generates the documentation allowing a developer to see all possible API endpoints, test them and read which variables are expected.
+              There is also autocompletion everywhere that is also built from the RAML specification.
+              <br>
+            </p>
+            <h3>Features</h3>
+            <p>
+              Documentation generated from API specification<br>
+              Debugger generated from Api specification<br>
+              Autocompletion generated from API specification
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -66,10 +92,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -77,7 +103,7 @@
             <p class="text-left text-light">
               Q42 | Philips | Signify<br>
               HTML | CSS | Typescript<br>
-              8 weken<br>
+              8 <?= $lang['weeks']; ?><br>
               -<br>
               Hue Api
             </p>

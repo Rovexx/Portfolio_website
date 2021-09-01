@@ -8,11 +8,10 @@
         <div class="col">
           <h1>Racing dashboard</h1>
           <?php if ($_SESSION['lang'] == "nl") { ?>
-
+            <h3>Hardware display voor in-game racing informatie</h3>
           <?php } else { ?>
-
+            <h3>Hardware display for in-game racing information</h3>
           <?php } ?>
-          <h3>Hardware display voor in-game racing informatie</h3>
         </div>
       </div>
     </div>
@@ -21,10 +20,6 @@
         <div class="row">
           <div class="col mt-3 text-light">
           <?php if ($_SESSION['lang'] == "nl") { ?>
-
-          <?php } else { ?>
-
-          <?php } ?>
             <p>
               Ik hou van racing games. En toen ik een keer een video zag van een dashboard die reageerde op informatie uit een game wist ik dat ik dit ook wilde bouwen.<br>
               Het programma achter dit princiepe heet SimHub. Dit programma luistert naar de informatie die de game in het RAM geheugen van de computer zet en kan deze informatie doorsturen naar een Arduino.
@@ -49,6 +44,32 @@
               8x8 Led matrix<br>
               3.2 inch Touchscreen
             </p>
+          <?php } else { ?>
+            <p>
+              I like racing games. And once I saw a video of a dashboard responding to information from a game, I knew I wanted to build this too.<br>
+              The program behind this principle is called SimHub. This program listens to the information that the game puts in the RAM of the computer and can send this information to an Arduino.
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I have already made 2 versions of this project. Both have TM1637 7 segment modules, WS2812B led bars and a MAX7219 8x8 led matrix.
+              My second version also has a 3.2 inch Nextion touchscreen display.<br>
+              The hardware is connected to an Arduino that receives data from the game via the SimHub program to display.
+              Which values ​​are displayed can easily be set via this program.
+              <br>
+              <span class="font-weight-bold">the process</span><br>
+              I started designing the housing in Fusion 360. I then 3D printed this housing and wrapped it in carbon fiber vinyl for a tough look.<br>
+              The hardware was easy to connect but for the touchscreen I still had to make a UI in Photoshop.<br>
+              The end result is a dashboard where I can see my speed, lap times, tire temperature, etc. during racing games.
+              The refresh indicator together with the RPM bar of LEDs make driving even more realistic.<br>
+              When I'm not in a racing game, my computer's temperatures can be seen along with CPU, GPU and RAM usage and Frames per second in game.
+            </p>
+            <h3>Features</h3>
+            <p>
+              8 4x7 segment modules<br>
+              16 Addressable RGB LEDs<br>
+              8x8 Led Matrix<br>
+              3.2 inch Touch Screen
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -97,10 +118,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -108,7 +129,7 @@
             <p class="text-left text-light">
               Hobby<br>
               C/C++<br>
-              20 Uur<br>
+              20 <?= $lang['hours']; ?><br>
               Fusion 360 | Photoshop | Nextion editor | SimHub<br>
               SimHub
             </p>

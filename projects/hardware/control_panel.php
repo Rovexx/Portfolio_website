@@ -8,11 +8,10 @@
         <div class="col">
           <h1>Star Citizen control panel</h1>
           <?php if ($_SESSION['lang'] == "nl") { ?>
-
+            <h3>Knoppen paneel voor het spel Star Citizen</h3>
           <?php } else { ?>
-
+            <h3>Buttons panel for the game Star Citizen</h3>
           <?php } ?>
-          <h3>Knoppen paneel voor het spel Star Citizen</h3>
         </div>
       </div>
     </div>
@@ -21,10 +20,6 @@
         <div class="row">
           <div class="col mt-3 text-light">
           <?php if ($_SESSION['lang'] == "nl") { ?>
-
-          <?php } else { ?>
-
-          <?php } ?>
             <p>
               Het spel Star Citizen is een van mijn favoriete spellen, het heeft echter 1 probleem. Je hebt alle knoppen op je toetsen bord x3 nodig. 
               Ik heb dus besloten om een knoppendoos te maken die te gebruiken is met dit spel.<br>
@@ -47,6 +42,30 @@
               2 joysticks<br>
               Werkt met alle spellen
             </p>
+          <?php } else { ?>
+            <p>
+              The game Star Citizen is one of my favorite games, but it has 1 problem. You need all the buttons on your keyboard x3.
+              So I decided to make a button box that can be used with this game.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I made a design in Photoshop of all the buttons and their places after listing all the actions of the game I want a button from.<br>
+              After this I made the design of the housing in Sketchup. I then had the front CNC cut and printed with the decals for all buttons.<br>
+              I ordered all the buttons via Aliexpress together with the Mach3 USB Hid interface to connect the buttons to the computer. This board registers itself simply as 2 joysticks with 32 buttons each, 8 analog inputs.
+              <br>
+              <span class="font-weight-bold">Community</span><br>
+              I have also shared this project with the Star Citizen community and it has been very well received here.
+              For example, I received a spotlight from the Star Citizen developers and I have already received several questions about whether this product will be in production.<br>
+              I have this project <a href="https://robertsspaceindustries.com/community/citizen-spotlight/7105-Star-Citizen-Custom-Control-Box" rel="noopener noreferrer" target="_blank" class="text -dark font-weight-bolder">here</a> documented.<br>
+              I'm in <a href="https://youtu.be/Q52nm5Sn1sk?list=WL&t=494" rel="noopener noreferrer" target="_blank" class="text-dark font-weight-bolder">this video </a> mentioned by the developers of Star Citizen.
+            </p>
+            <h3>Features</h3>
+            <p>
+              3D printed housing with CNC cut top plate<br>
+              59 buttons<br>
+              2 joysticks<br>
+              Works with all games
+            </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -111,16 +130,16 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
           <div class="col">
             <p class="text-left text-light">
               Hobby<br>
-              40 Uur<br>
+              40 <?= $lang['hours']; ?><br>
               Google Sketchup | Photoshop<br>
               PC
             </p>

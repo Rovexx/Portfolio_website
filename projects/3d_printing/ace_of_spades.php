@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Destiny Ace of Spades</h1>
-          <h3>3D geprinte model uit het spel Destiny</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>3D geprinte model uit het spel Destiny</h3>
+          <?php } else { ?>
+            <h3>3D printed model from the game Destiny</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Een goede vriend van mij wilde graag een 3D geprinte variant van een wapen uit een videogame hebben.<br>
               Het model was een handpistool met de naam Ace of Spades uit het spel Destiny.<br>
@@ -26,6 +31,19 @@
               Bestaand model gebruikt en licht aangepast<br>
               Gaten opgevuld, geschuurd en vervolgens met spray paint kleur gegeven.
             </p>
+          <?php } else { ?>
+            <p>
+              A good friend of mine wanted to have a 3D printed variant of a weapon from a video game.<br>
+              The model was a hand gun named Ace of Spades from the game Destiny.<br>
+              <br>
+            </p>
+            <h3>Features</h3>
+            <p>
+              Fully 3D printed<br>
+              Existing model used and slightly modified<br>
+              Holes filled, sanded and then colored with spray paint.
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -86,16 +104,16 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
           <div class="col">
             <p class="text-left text-light">
-              Vriend<br>
-              40 Uur<br>
+              <?= $lang['friend']; ?><br>
+              40 <?= $lang['hours']; ?><br>
               Ideamaker slicer<br>
               -
             </p>

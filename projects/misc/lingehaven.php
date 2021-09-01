@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Lingehaven Teller</h1>
-          <h3>Boten teller bij de Lingehaven Gorinchem</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Boten teller bij de Lingehaven Gorinchem</h3>
+          <?php } else { ?>
+            <h3>Boat counter for the Lingehaven in Gorinchem</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               De Lingehaven in Gorinchem heeft mij gevraagd om een tellersysteem te maken dat kan bijhouden hoeveel boten er door de sluis komen.<br>
               <br>
@@ -30,6 +35,23 @@
               Tel data exporteren.<br>
               Data backup naar USB.
             </p>
+          <?php } else { ?>
+            <p>
+               The Lingehaven in Gorinchem has asked me to make a counter system that can keep track of how many boats pass through the lock.<br>
+               <br>
+               <span class="font-weight-bold">Concept</span><br>
+               I've created a system using a Raspberry Pi that captures button input and processes it as a count in a database.<br>
+               A web interface runs here, which means that a count can also be done manually and the data can be viewed and exported.
+             </p>
+             <h3>Features</h3>
+             <p>
+               Counting via buttons on the lock<br>
+               manual counting via web interface<br>
+               Web interface for viewing data.<br>
+               Export count data.<br>
+               Data backup to USB.
+             </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -62,10 +84,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -73,7 +95,7 @@
             <p class="text-left text-light">
               Lingehaven Gorinchem<br>
               HTML | CSS | JavaScript | PHP | SQL | Python<br>
-              60 Uur<br>
+              60 <?= $lang['hours']; ?><br>
               -<br>
               Raspberry Pi
             </p>

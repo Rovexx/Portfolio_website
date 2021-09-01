@@ -15,6 +15,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Op mijn stage bij Q42 heb ik mee mogen doen met W00tcamp. Dit is een evenement van 2 dagen waarbij je in een team iets tofs maakt.
               Ik heb hierbij een project gedaan in de Simone Gierts arena. Hierbij was het de bedoeling dat je een zo nutteloos mogelijke robot maakt.<br>
@@ -36,6 +37,29 @@
               Compleet nutteloos<br>
               Heeft de arena gewonnen
             </p>
+          <?php } else { ?>
+            <p>
+              During my internship at Q42 I was able to participate in W00tcamp. This is a 2 day event where you create something cool in a team.
+              I did a project in the Simone Gierts arena. The aim was to make a robot that is as useless as possible.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              We had invented a robot that would test whether something is made of glass by breaking the object.<br>
+              A photo is taken with a camera on which object recognition is applied to find out whether it is made of glass.
+              Then a hammer will be lifted which will smash the object. If it breaks, it's probably glass.
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              On this project I made the housing, programmed the Arduino that will control the hammer and several solenoids that tap against the glass.<br>
+              <br>
+              With this project, my team won the arena in which we competed! Our robot worked but was completely useless and so perfect!
+            </p>
+            <h3>Features</h3>
+            <p>
+              May detect if something is made of glass<br>
+              Doesn't really work<br>
+              Completely useless<br>
+              Won the arena
+            </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -88,10 +112,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -99,7 +123,7 @@
             <p class="text-left text-light">
               Q42<br>
               C/C++<br>
-              2 dagen<br>
+              2 <?= $lang['days']; ?><br>
               -<br>
               Arduino | Raspberry Pi
             </p>

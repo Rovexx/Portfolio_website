@@ -16,10 +16,6 @@
         <div class="row">
           <div class="col mt-3 text-light">
           <?php if ($_SESSION['lang'] == "nl") { ?>
-
-          <?php } else { ?>
-
-          <?php } ?>
             <p>
               Vanuit een keuzevak op de Hogeschool Rotterdam kreeg ik de opdracht om een smart object te maken.<br>
               Ik heb toen besloten om een instrument te maken met behulp van een Arduino.
@@ -28,6 +24,16 @@
               Ik heb van dit project ook een Instructable gemaakt waar je alles kunt lezen over dit hele project en hoe je er zelf ook een zou kunnen maken.
               Dit is de vinden via op <a href="https://www.instructables.com/id/Ultrasonic-Smart-Instrument/" rel="noopener noreferrer" target="_blank" class="text-dark font-weight-bolder">mijn instructable</a>
             </p>
+          <?php } else { ?>
+            <p>
+              From an extra credit course at Rotterdam University of Applied Sciences, I was commissioned to make a smart object.<br>
+              I then decided to make an instrument using an Arduino.
+              The instrument will be a synthesizer that can be controlled with your hand in the air. This was inspired by the theremin, a synthesizer that you also play with 2 hands in the air.<br>
+              <br>
+              I also made an Instructable of this project where you can read all about this whole project and how you could make one yourself.
+              This can be found via at <a href="https://www.instructables.com/id/Ultrasonic-Smart-Instrument/" rel="noopener noreferrer" target="_blank" class="text-dark font-weight -bolder">my instructable</a>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Video -->
@@ -87,10 +93,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -98,7 +104,7 @@
             <p class="text-left text-light">
               School<br>
               C/C++<br>
-              30 Uur<br>
+              30 <?= $lang['hours']; ?><br>
               Fusion 360 | Adobe Illustrator<br>
               Arduino
             </p>

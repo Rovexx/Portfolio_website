@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Star Trek Enterprise NX-01 warp core</h1>
-          <h3>Warp core van de Enterprise NX-01</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Warp core van de Enterprise NX-01</h3>
+          <?php } else { ?>
+            <h3>Warp core from the Starship Enterprise NX-01</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Vanuit een keuzevak op de Hogeschool Rotterdam kreeg ik de opdracht om iets te maken waarbij ik minimaal 2 machines moest gebruiken.<br>
               Ik heb toen besloten om de Warp Core van de USS Enterprise NX-01 te maken omdat ik een grote fan ben van Star Trek en ik dit altijd een fascinerend ding vond uit de serie.<br>
@@ -22,6 +27,15 @@
               Ik heb van dit project ook een Instructable gemaakt waar je alles kunt lezen over dit hele project en hoe je er zelf ook een zou kunnen maken.
               Dit is de vinden via op <a href="https://www.instructables.com/id/Star-Trek-Enterprise-NX-01-Warp-Core/" rel="noopener noreferrer" target="_blank" class="text-dark font-weight-bolder">mijn instructable</a>
               <br>
+          <?php } else { ?>
+            <p>
+              From an elective course at Rotterdam University of Applied Sciences, I was given the assignment to make something in which I had to use at least 2 machines.<br>
+              I then decided to make the Warp Core of the USS Enterprise NX-01 because I'm a big fan of Star Trek and I've always found this to be a fascinating thing from the series.<br>
+              <br>
+              I also made an Instructable of this project where you can read all about this whole project and how you could make one yourself.
+              This is the found via at <a href="https://www.instructables.com/id/Star-Trek-Enterprise-NX-01-Warp-Core/" rel="noopener noreferrer" target="_blank" class ="text-dark font-weight-bolder">my instructable</a>
+              <br>
+          <?php } ?>
             </p>
           </div>
         </div>
@@ -79,10 +93,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -90,7 +104,7 @@
             <p class="text-left text-light">
               School<br>
               C/C++<br>
-              60 Uur<br>
+              60 <?= $lang['hours']; ?><br>
               Fusion 360 | Ideamaker slicer<br>
               Arduino
             </p>

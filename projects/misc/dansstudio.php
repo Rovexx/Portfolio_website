@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Dansstudio Jolynda website</h1>
-          <h3>De website van Dansstudio Jolynda</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>De website van Dansstudio Jolynda</h3>
+          <?php } else { ?>
+            <h3>De website for Dansstudio Jolynda</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Mijn zus heeft haar eigen dansstudio. Ik heb voor haar de website gemaakt waarop algemene info staat voor haar dansstudio.<br>
               <br>
@@ -22,6 +27,15 @@
             <h3>Website</h3>
             <a href="https://www.dansstudiojolynda.nl/" rel="noopener noreferrer" target="_blank" style="color: #e5187c;" class="font-weight-bolder">Dansstudio Jolynda</a><br>
             <br>
+          <?php } else { ?>
+            <p>
+               My sister has her own dance studio. I made the website for her that contains general information for her dance studio.<br>
+               <br>
+             </p>
+             <h3>Website</h3>
+             <a href="https://www.dansstudiojolynda.nl/" rel="noopener noreferrer" target="_blank" style="color: #e5187c;" class="font-weight-bolder">Dansstudio Jolynda</a><br>
+             <br>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -54,10 +68,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>

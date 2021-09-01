@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Star Citizen 890 Jump</h1>
-          <h3>3D geprint ruimteschip uit het spel Star Citizen</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>3D geprint ruimteschip uit het spel Star Citizen</h3>
+          <?php } else { ?>
+            <h3>3D printed spaceship from the game Star Citizen</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               In het spel Star Citizen zit een heel luxe ship, de Origin 890 Jump. 
               Omdat ik dit een heel gaaf schip vindt en een groot 3D print project wilde maken heb ik besloten om dit model te gaan printen.<br>
@@ -33,6 +38,26 @@
               Ik ben dus nu bezig om alle punten waaruit dit model bestaat (+/- 10 miljoen gereduceert tot 600.000) één voor één langs te gaan en het model te repareren.
               Wanneer dit klaar is zal ik alle onderdelen gaan printen, schuren, schuren, schuren en verven.
             </p>
+          <?php } else { ?>
+            <p>
+              In the game Star Citizen there is a very luxurious ship, the Origin 890 Jump.
+              Because I think this is a very cool ship and wanted to make a large 3D print project, I decided to print this model.<br>
+              My goal is to make this model 1 meter long. In addition, I also want to add water vapor nozzles to make it look like the motors are working.
+            </p>
+            <h3>Process</h3>
+            <p>
+              It started with getting the original model from the site.
+              There is a 3D ship hologram viewer in which the developers have very nicely placed their full model of millions of polygons.<br>
+              <br>
+              After downloading this model, the task of converting this model from a video game quality to a waterproof model for 3D printing began.
+              I didn't know beforehand that this would take hundreds of hours. The problem is that you don't have to make waterproof models for a video game.
+              This means that not all the dots that make up this model are connected and that there are walls that intersect.<br>
+              <br>
+
+              So now I'm going through all the points that make up this model (+/- 10 million reduced to 600,000) one by one and repairing the model.
+              When this is ready I will start printing, sanding, sanding, sanding and painting all parts.
+            </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -85,16 +110,16 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
           <div class="col">
             <p class="text-left text-light">
               Hobby project<br>
-              300+ Uur<br>
+              300+ <?= $lang['hours']; ?><br>
               Blender | Meshlab<br>
               -
             </p>

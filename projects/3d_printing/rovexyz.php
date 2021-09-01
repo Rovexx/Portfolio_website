@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>RovexYZ 3D printer</h1>
-          <h3>Mijn eigen ontworpen CoreXY 3D printer</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Mijn eigen ontworpen CoreXY 3D printer</h3>
+          <?php } else { ?>
+            <h3>My custom designed CoreXY 3D printer</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Ik ben gek op 3D printen en dit is uitgegroeit tot mijn favorite hobby. Maar met deze passie kwam ook een verlangen naar een printer waarmee ik al mijn projecten kon maken.<br>
               Ik heb in het verleden al 2 DIY kits in elkaar gezet, afgesteld en dit zijn echte werkpaarden geworden. Maar ik wilde een printer die ook super grote dingen zou kunnen printen met hoog detail en snel.
@@ -56,6 +61,49 @@
               E3D V6 met Titan aero extruder<br>
               220V 1000W verwarmd bed (20s opwarmen voor 70*C)
             </p>
+          <?php } else { ?>
+            <p>
+              I love 3D printing and this has become my favorite hobby. But with this passion also came a desire for a printer with which I could make all my projects.<br>
+              I have already assembled and adjusted 2 DIY kits in the past and these have become real workhorses. But I wanted a printer that could also print super large things with high detail and fast.
+              And all this with a low price tag.<br>
+              So there was only 1 thing to do then, I design and build it myself.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I have done a lot of research into the different 3D printers out there and what kind of mechanisms and parts they use. Then I started looking at my requirements and which parts suited them well.<br>
+              I then drew up a list of requirements for my printer:<br>
+              - It must have a large print area.<br>
+              - It must have a high print resolution.<br>
+              - it must be stable and be able to print quickly.<br>
+              - It must have a big screen that I can control it.<br>
+              - He must have a large heated print bed.<br>
+              <br>
+              With these requirements I started looking for hardware that could meet the requirements and I first started designing the printer completely in CAD.<br>
+              I chose a CoreXY design to be able to print quickly and because of the stable frame.
+              I made my complete printer in Fusion 360 so that I get a complete parts list and could immediately test whether all parts were strong enough.
+              And because of the motion capabilities in Fusion 360, I also had the opportunity to test all the mechanics in software before actually building it.<br>
+              <br>
+              <span class="font-weight-bold">The process</span><br>
+              I made the complete printer with all parts in Fusion 360. I then made a BOM (bill of materials) list so that I could find out where I was going to order everything.
+              I chose Aliexpress for 80% of the parts because my goal was to make this printer as cheap as possible.<br>
+              <br>
+              After everything was ordered and I had a hilariously large amount of china packages, the building process could begin.
+              Since I had already designed the entire machine in CAD, this part was quite simple and there were just a few minor things that didn't fit well and required minor adjustments.<br>
+              After setting up the firmware correctly, which went very quickly because of the easy RepRap firmware configurator, it was time for the 1st test of the components.
+              Everything worked! and so the 1st test print could be started. And this print also went fantastic!<br>
+              <br>
+              So a very successful project. I learned a lot from 3D printer mechanics, CAD design, electrical and much more.<br>
+              And all this for the super affordable price of 1100 Euro.
+            </p>
+            <h3>Features</h3>
+            <p>
+              Multiple protections built in against short circuit, thermal runaway, etc.<br>
+              CoreXY design for stable fast printing up to 600mm/s<br>
+              Large print area of ​​550x350x600mm<br>
+              Duet 2 Wifi with 7.0 inch touchscreen<br>
+              E3D V6 with Titan aero extruder<br>
+              220V 1000W heated bed (20s heat up for 70*C)
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -144,10 +192,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -155,7 +203,7 @@
             <p class="text-left text-light">
               Hobby<br>
               -<br>
-              400 Uur<br>
+              400 <?= $lang['hours']; ?><br>
               Fusion 360<br>
               Duet
             </p>

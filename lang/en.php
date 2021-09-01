@@ -33,9 +33,12 @@
     "programmingLanguage" => "Programming language",
     "projectDuration" => "Project duration",
     "programs" => "Programs",
+    "quarter" => "Quarter",
     "months" => "Months",
     "weeks" => "Weeks",
-    "quarter" => "Quarter",
+    "days" => "Dagen",
+    "hours" => "Hours",
+    "friend" => "Friend",
     "lang_en" => "English",
     "lang_nl" => "Dutch"
   )

@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Qerst game</h1>
-          <h3>IOT water fontein spelletje</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>IOT water fontein spelletje</h3>
+          <?php } else { ?>
+            <h3>IOT water fountain game</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Tijdens het kerstdiner van mijn stageplek Q42 wilde ik een spelletje maken dat door de gasten gespeeld kon worden.<br>
               Dit project diende als korte afsluiter voor mijn stagetijd.<br>
@@ -27,6 +32,20 @@
               De website communiceert met een ESP32 via websockets. 
               Wanneer een team heeft gewonnen ontvangt de ESP32 hier bericht over en stuurt deze een Arduino aan die vervolgens een lichtshow en de 3D geprinte waterpomp aanstuurt.
             </p>
+          <?php } else { ?>
+            <p>
+              During the Christmas dinner at my internship Q42 I wanted to make a game that could be played by the guests.<br>
+              This project served as a short conclusion to my internship.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I wanted to create a game where guests could play for different teams and score points for their team.
+              These points could be scored by sending messages, the number of characters in your message was the number of points.<br>
+              When a team has scored enough points, a water fountain will give a short show that is unique to that team.<br>
+              <br>
+              The website communicates with an ESP32 through web sockets.
+              When a team has won, the ESP32 receives a message about this and sends an Arduino which then controls a light show and the 3D printed water pump.
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Video -->
@@ -74,10 +93,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>

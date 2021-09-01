@@ -64,6 +64,17 @@
           <?php } ?>
           </div>
         </div>
+        <!-- Links -->
+        <div class="row justify-content-md-center text-light">
+          <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              De code voor dit project is te vinden op GitHub
+            <?php } else { ?>
+              The code for this project can be found on my GitHub
+            <?php } ?>
+            <a href="https://github.com/Rovexx/superbespaarapp" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_github.svg">Superbespaarapp</a>
+          </p>
+        </div>
         <!-- Images -->
         <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">

@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Go kart</h1>
-          <h3>DIY electromotor op een zelfgemaakt go kart</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>DIY electromotor op een zelfgemaakt go kart</h3>
+          <?php } else { ?>
+            <h3>DIY electromotor on a homemade go kart</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Samen met een goede vriend van de basisschool heb ik een electromotor op een zelf gemaakte kart auto gemonteerd. 
               We hebben hiervoor een 3KW electromotor met 2 12V autoaccus en een PWM controller ertussen gebruikt.<br>
@@ -27,6 +32,20 @@
               Volledige straatlegale verlichting<br>
               Topsnelheid onbekend
             </p>
+          <?php } else { ?>
+            <p>
+               Together with a good friend from primary school I mounted an electric motor on a self-made kart car.
+               We used a 3KW electric motor with 2 12V car batteries and a PWM controller in between.<br>
+               After some setbacks we managed to build a working kart that gave us all a lot of fun and knowledge while making it.
+             </p>
+             <h3>Features</h3>
+             <p>
+               3000W 24V electric motor<br>
+               Porter 10 PWM motor drive<br>
+               Full street legal lighting<br>
+               Top speed unknown
+             </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -91,13 +110,13 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              PROJECT DUUR<br>
+              <?= $lang['projectDuration']; ?><br>
               PLATFORM
             </p>
           </div>
           <div class="col">
             <p class="text-left text-light">
-              3 Maanden<br>
+              3 <?= $lang['months']; ?><br>
               Kart
             </p>
           </div>

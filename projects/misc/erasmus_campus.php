@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Erasmus campus project</h1>
-          <h3>Volledige Erasmus campus nagemaakt in Minecraft</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Volledige Erasmus campus nagemaakt op schaal in Minecraft</h3>
+          <?php } else { ?>
+            <h3>Entire Erasmus campus recreated to scale in Minecraft</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               De Erasmus Universiteit in Rotterdam wilde een recreactie van het Erasmus campus in Minecraft op de schaal 1:1. 
               Dit heb ik samen met 2 vrienden en de organisatie Shapescape gebouwd.<br>
@@ -27,6 +32,20 @@
               <span class="font-weight-bold">Timelapse</span><br>
               Ik heb van het hele project een timelapse gemaakt zodat je mooi de voortgang van het hele process kan zien.
             </p>
+          <?php } else { ?>
+            <p>
+               The Erasmus University in Rotterdam wanted a recreation of the Erasmus campus in Minecraft on a scale of 1:1.
+               I built this together with 2 friends and the organization Shapescape.<br>
+               I've set up a server to build the project into and to allow a large number of players to visit the map.<br>
+               <br>
+               <span class="font-weight-bold">Build</span><br>
+               I first made all the outlines of the buildings on the campus so that I knew where all the buildings and roads were.
+               I then made some buildings with 2 friends and I also built the roads.<br>
+               <br>
+               <span class="font-weight-bold">Timelapse</span><br>
+               I made a timelapse of the entire project so that you can see the progress of the entire process.
+             </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -101,10 +120,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -112,7 +131,7 @@
             <p class="text-left text-light">
               ErasmusX<br>
               -<br>
-              4 maanden<br>
+              4 <?= $lang['months']; ?><br>
               Minecraft | Adobe Premiere<br>
               Minecraft Java Edition
             </p>

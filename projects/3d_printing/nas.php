@@ -7,6 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>DIY NAS</h1>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+
+          <?php } else { ?>
+
+          <?php } ?>
           <h3>Raspberry Pi Open Source Network Attached Storage</h3>
         </div>
       </div>
@@ -15,6 +20,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Dit project is ontstaan uit een frustatie die ik had met Dropbox. Ik gebruik dit platform al jaren maar ik werd steeds meer gelimiteerd door de hoeveelheid gratis opslag.<br>
               Een NAS (network attached storage) was dus de oplossing, maar een NAS behuizing is enorm duur. Ik heb toen besloten om zelf een NAS te ontwerpen en bouwen.
@@ -50,6 +56,43 @@
               500mb/s lees + schrijf snelheid opslag<br>
               Ruimte voor 4 schijven waarvan 2 op USB 3.0 en 2 op USB 2.0 snelheden.
             </p>
+          <?php } else { ?>
+            <p>
+              This project grew out of a frustration I had with Dropbox. I've been using this platform for years but I was increasingly limited by the amount of free storage.<br>
+              A NAS (network attached storage) was therefore the solution, but a NAS enclosure is extremely expensive. I then decided to design and build a NAS myself.
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I have researched software and hardware combinations that can fulfill my requirements.<br>
+              My requirements for this project were:<br>
+              - I need to access my files from outside my home.<br>
+              - I want quick storage<br>
+              - My files must be backed up.<br>
+              - I want to be able to send friends a link to a file so that others have 'limited' access to my NAS.<br>
+              I then came up with the combination of a Raspberry Pi with 2 SSDs and the software combination of Open Media Vault with Nextcloud.<br>
+
+              <br>
+              <span class="font-weight-bold">The Process</span><br>
+              I designed the housing in Fusion 360 with space for 4 3.5 inch HDD or 2.5 inch SSD.
+              I printed this housing and after a lot of sanding I also gave it a lick of paint with 10 layers of spray paint.<br>
+              After that I installed the software. I worked with Docker for this project.<br>
+              <br>
+              Docker is a way of running different pieces of software in their own 'containers'.
+              This was my first time working with Docker, so it was a big learning step for me. But I think I've mastered the basics now.
+              Open Media Vault runs on the Raspberry Pi. You can see this software as the operating system that manages everything from putting folders on hard drives to linking those folders to your network.<br>
+              In addition, Docker runs with containers for Portainer (interface for Docker), DuckDNS (provides access to the NAS from the internet) and Nextcloud (replacing Dropbox functionality).<br>
+              <br>
+              After setting everything up, I have a self-built NAS with 256GB SSD storage that is fully backed up, with room for 2 more drives. Everything for less than 150 Euros!
+            </p>
+            <h3>Features</h3>
+            <p>
+              Modern unique look<br>
+              Backed up SSD storage<br>
+              Storage accessible everywhere<br>
+              Automatic phone media synchronization<br>
+              500mb/s read + write speed storage<br>
+              Space for 4 drives, 2 at USB 3.0 and 2 at USB 2.0 speeds.
+            </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -110,10 +153,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -121,7 +164,7 @@
             <p class="text-left text-light">
               Hobby<br>
               -<br>
-              100 Uur<br>
+              100 <?= $lang['hours']; ?><br>
               Fusion 360<br>
               Linux | Docker | OMV | Nextcloud
             </p>

@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Star Trek Enterprise NCC 1701D Warp core</h1>
-          <h3>Warp core van de Enterprise NCC 1701D</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Warp core van de Enterprise NCC 1701D</h3>
+          <?php } else { ?>
+            <h3>Warp core from the Starship Enterprise NCC 1701D</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Als grote Star Trek fan wilde ik graag de Warp Core printen van de USS Enterprise NCC 1701D uit Star Trek TNG<br>
               <br>
@@ -30,6 +35,23 @@
               Orginele LED patronen<br>
               66cm hoog
             </p>
+          <?php } else { ?>
+            <p>
+              As a big Star Trek fan I was eager to print the Warp Core of the USS Enterprise NCC 1701D from Star Trek TNG<br>
+              <br>
+              <span class="font-weight-bold">The process</span><br>
+              I downloaded the model from Thingiverse and then printed it. The black parts are made of PLA and the transparent parts are made of PETG.<br>
+              I have incorporated several strips of WS2812B LED strip in it, which I control with a self-written program on an Arduino Nano with a Touchscreen LCD.<br>
+              <br>
+              The whole project took 91 hours of printing time and took up 850 grams of print material.
+            </p>
+            <h3>Features</h3>
+            <p>
+              Touchscreen control for leds<br>
+              Original LED patterns<br>
+              66cm high
+            </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -86,10 +108,10 @@
         <div class="row my-4">
           <div class="col">
             <p class="font-weight-bolder text-right text-uppercase">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -97,7 +119,7 @@
             <p class="text-left text-light">
               Hobby<br>
               C/C++<br>
-              100 Uur<br>
+              100 <?= $lang['hours']; ?><br>
               Ideamaker slicer<br>
               Arduino
             </p>
