@@ -7,14 +7,19 @@
       <div class="row">
         <div class="col">
           <h1>Interactive Installation Darkpark</h1>
-          <h3>Interactieve installatie op het Darkpark in Rotterdam</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Interactieve installatie op het Darkpark in Rotterdam</h3>
+          <?php } else { ?>
+            <h3>Interactive installation for the Darkpark in Rotterdam</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
     <div class="bg-blue">
       <div class="container">
         <div class="row">
-          <div class="col mt-3">
+          <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Vanuit mijn opleiding had ik en mijn team van 3 andere personen de opdracht gekregen om een interactieve isntallatie te maken voor de locatie van het Darkpark in Rotterdam.
               Ik heb toen met het team de locatie onderzocht door terplekke rond te lopen en deskresearch te doen naar de historie van de locatie.
@@ -34,12 +39,37 @@
               <br>
               Ik heb ook geleerd om met AJAX de data op de website te updaten zonder de pagina te hoeven herladen.
             </p>
+          <?php } else { ?>
+            <p>
+              From my education, I and my team of 3 other people had been commissioned to make an interactive installation for the location of the Darkpark in Rotterdam.
+              I then investigated the location with the team by walking around the site and doing desk research into the history of the location.
+              With this information we were able to form a plan for an interactive installation.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              The concept was that a small train would be built at the location in which children could take a tour and during the ride could have a water fight against rabbit targets that are placed on the park.
+              This concept is applicable to this location because the park used to be a shunting yard for trains and because there is now a rabbit infestation at that location.<br>
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              I made a model of the park with a scale model of the game. I then programmed the game for an Arduino with internet connection.
+              The Arduino records the scoring and transmits the train's data and location to a web interface where players can track the game and enter their name for the highscore system.<br>
+            </p>
+            <h3>Learning objectives</h3>
+            <p>
+              With this project I learned to connect an Arduino to the internet and to send data to a website.
+              <br>
+              I also learned to update the data on the website with AJAX without having to reload the page.
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Links -->
         <div class="row justify-content-md-center text-light">
           <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
             De code voor dit project is te vinden op GitHub
+          <?php } else { ?>
+            The code for this project can be found on my GitHub
+          <?php } ?>
             <a href="https://github.com/Rovexx/Dakpark" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_github.svg">Dakpark</a>
           </p>
         </div>
@@ -84,11 +114,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -96,7 +126,7 @@
             <p class="text-left text-light">
               School<br>
               HTML | CSS | JavaScript | PHP | SQL | C/C++<br>
-              1 Kwartaal<br>
+              1 <?= $lang['quarter']; ?><br>
               -<br>
               Website | Arduino
             </p>
@@ -107,7 +137,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

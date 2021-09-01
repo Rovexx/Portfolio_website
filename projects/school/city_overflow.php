@@ -15,6 +15,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               City Overflow was gemaakt binnen een week als proof of concept voor de minor Game Design & Development. Dit concept zou inzicht geven of dit een haalbaar iets is om een volledige game mee te maken.<br>
               <br>
@@ -25,12 +26,28 @@
               Er waren nog een aantal limitaties waaronder de prestaties die ervoor gezorgd hebben dat dit project niet verder is uitgewerkt dan de demo.
               <br>
             </p>
+          <?php } else { ?>
+            <p>
+              City Overflow was made within a week as proof of concept for the minor Game Design & Development. This concept would give insight into whether this is a feasible thing to make a full game with.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              The concept is based on Nvidia Flex for Unity. This is a framework for real-time particle-based simulation.<br>
+              My goal was to use this for a game where you have to bring water to 1 or more cities by building a pipe network.
+              Unfortunately, it turned out that this technology was not yet developed enough to really be able to make a game with it.
+              There were still a number of limits including performance that prevented this project from progressing beyond the demo.
+              <br>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Links -->
         <div class="row justify-content-md-center text-light">
           <p>
-            De code voor dit project is te vinden op GitHub
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              De code voor dit project is te vinden op GitHub
+            <?php } else { ?>
+              The code for this project can be found on my GitHub
+            <?php } ?>
             <a href="https://github.com/Rovexx/City_Overflow" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_github.svg">City overflow</a>
           </p>
         </div>
@@ -82,11 +99,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               BIBLIOTHEEK
             </p>
           </div>
@@ -105,7 +122,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

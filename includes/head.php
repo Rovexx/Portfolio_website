@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once 'includes/config.php';?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/config.php';?>
 <html lang=<?= $_SESSION['lang']; ?>>
   <head>
     <meta name="robots" content="noindex">
@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/flag-icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/flag-icon.css">
     <title>Portfolio Roel Versteeg</title>
-    <link rel="icon" href="/content/images/favicon.jpg">
+    <link rel="icon" href="/content/favicon.ico">
   </head>

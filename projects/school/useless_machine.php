@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Useless machine</h1>
-          <h3>Een nutteloze machine</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Een nutteloze machine</h3>
+          <?php } else { ?>
+            <h3>A useless machine</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Als introductieopdracht voor mijn opleiding moesten we in teams van 4 personen een nutteloze machine maken.<br>
               <br>
@@ -26,6 +31,19 @@
               Er zit ook een ultrasone sensor op die waarneemt wanneer er iets voor de kraan zit en dus de kraan uit moet.<br>
               Ik heb ook een waterpomp ontworpen en 3D geprint.
             </p>
+          <?php } else { ?>
+            <p>
+              As an introductory assignment for my study, we had to make a useless machine in teams of 4 people.<br>
+              <br>
+              <span class="font-weight-bold">concept</span><br>
+              Our concept was a water tap that turns off when you need water.<br>
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              I programmed the Arduino to drive a motor to run water.<br>
+              It also has an ultrasonic sensor that detects when something is in front of the tap and therefore has to be turned off.<br>
+              I also designed and 3D printed a water pump.
+            </p>
+          <?php } ?>
           </div>
         </div>
 
@@ -69,11 +87,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -81,7 +99,7 @@
             <p class="text-left text-light">
               School<br>
               C/C++<br>
-              3 weken<br>
+              3 <?= $lang['weeks']; ?><br>
               -<br>
               Arduino
             </p>
@@ -92,7 +110,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

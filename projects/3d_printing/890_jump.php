@@ -84,7 +84,7 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
+            <p class="font-weight-bolder text-right text-uppercase">
               OPDRACHTGEVER<br>
               PROJECT DUUR<br>
               PROGRAMMAS<br>
@@ -105,7 +105,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Super bespaar app</h1>
-          <h3>Bespaar het milieu door bewust te kopen</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Bespaar het milieu door bewust te kopen</h3>
+          <?php } else { ?>
+            <h3>Save the environment by buying consciously</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,12 +19,13 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Vanuit de Gemeente Rotterdam kreeg ik vanuit mijn opleiding de opdracht om een project te doen dat te maken heeft met de energietransitie naar duurzame energie.<br>
               Ik heb dit project in een team met nog 2 andere studenten gedaan.<br>
               <br>
               <span class="font-weight-bold">Concept</span><br>
-              Het concept dat ik samen wij hadden bedacht was een progressive web app waarmee je punten kan scoren door aankopen in de supermarkt te doen die duurzaam zijn.
+              Het concept dat wij samen hadden bedacht was een progressive web app waarmee je punten kan scoren door aankopen in de supermarkt te doen die duurzaam zijn.
               Een progressive web app is een website die je ook als app kan installeren op je telefoon.
               Bij het kopen van een stuk vlees krijg je bijvoorbeeld geen punten omdat de ecologische impact hiervan hoog is. 
               Bij het kopen van een potje bonen krijg je veel punten omdat dit de groente is met de kleinste impact op het millieu.<br>
@@ -35,6 +40,28 @@
             <p>
               Maak een progressive web app.<br>
             </p>
+          <?php } else { ?>
+            <p>
+              From the Municipality of Rotterdam I was instructed to do a project related to the energy transition to sustainable energy.<br>
+              I did this project in a team with 2 other students.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              The concept that we came up with together was a progressive web app that allows you to score points by making sustainable purchases in the supermarket.
+              A progressive web app is a website that you can also install as an app on your phone.
+              When buying a piece of meat, for example, you do not get points because the ecological impact of this is high.
+              When buying a jar of beans you get a lot of points because it is the vegetable with the smallest impact on the environment.<br>
+              With the points you earn you can save for a discount on, for example, a solar panel or a discount on your next sustainable product.<br>
+              The whole purpose of this app was to make the retailers subconsciously aware of their impact on the environment based on what they buy.
+              By linking this app with, for example, the bonus card of the already ecologically responsible store, Ekoplaza can save the customer without any hindrance and reduce his footprint on the planet.<br>
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              In this project I kept myself busy making the pages of the web app.<br>
+            </p>
+            <h3>Learning objectives</h3>
+            <p>
+              Create a progressive web app.<br>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -62,11 +89,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -85,7 +112,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

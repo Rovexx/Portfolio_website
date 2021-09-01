@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row text-light">
           <div class="col-12 mt-3">
-            <h1 class="font-weight-bold"><?= $lang['aboutMe']; ?></h1>
+            <h1 class="font-weight-bold text-uppercase"><?= $lang['aboutMe']; ?></h1>
           </div>
           <div class="col-md">
             <h5 class="font-weight-bold"><?= $lang['background']; ?></h5>
@@ -78,53 +78,106 @@
       <div class="row">
         <!-- Educatie -->
         <div class="col-md mt-3">
-          <h1 class="txt-blue-darker font-weight-bold">EDUCATIE</h1>
-          <h2 class="txt-blue">Wat ik geleerd heb</h2>
+          <h1 class="txt-blue-darker font-weight-bold text-uppercase"><?= $lang['education']; ?></h1>
+          <h2 class="txt-blue"><?= $lang['whatILearned']; ?></h2>
           <p>
             <span class="font-weight-bold">2017 - 2021</span><br>
-            Hogeschool Rotterdam - Rotterdam Wijnhaven<br>
-            Creative Media and Game Technologies (CMGT)| Bachelor of Science
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <span class="font-weight-bold">Hogeschool Rotterdam - Rotterdam Wijnhaven</span><br>
+              <span class="font-italic">Creative Media and Game Technologies (CMGT)</span><br>
+              • Propedeuse<br>
+              • Bachelor of Science (Voltijd)<br>
+              • Minor Game Design & Development<br>
+            <?php } else { ?>
+              <span class="font-weight-bold">Rotterdam University of Applied Sciences - Rotterdam Wijnhaven</span><br>
+              <span class="font-italic">Creative Media and Game Technologies (CMGT)</span><br>
+              • Propaedeutics<br>
+              • Bachelor of Science (Fulltime)<br>
+              • Minor Game Design & Development<br>
+            <?php } ?>
           </p>
           <p>
             <span class="font-weight-bold">2012 - 2017</span><br>
-            Fortes Lyceum - Gorinchem Wijdschildlaan<br>
-            HAVO | Natuur en Gezondheid
-          </p>
-          <p>
-            <span class="font-weight-bold">2012 - 2016</span><br>
-            Fortes Lyceum - Gorinchem Wijdschildlaan<br>
-            Technasium | Onderzoek & Ontwerpen
+            <span class="font-weight-bold">Fortes Lyceum - Gorinchem Wijdschildlaan</span><br>
+            <span class="font-italic">Natuur en Gezondheid (NG)</span><br>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              • HAVO<br>
+              • Technasium certificaat
+            <?php } else { ?>
+              • HAVO (Senior general secondary education)<br>
+              • Technasium certificate
+            <?php } ?>
           </p>
         </div>
         <!-- Ervaring -->
         <div class="col-md mt-3">
-          <h1 class="txt-blue-darker font-weight-bold">ERVARING</h1>
-          <h2 class="txt-blue">Waar ik gewerkt heb</h2>
+          <h1 class="txt-blue-darker font-weight-bold text-uppercase"><?= $lang['experience']; ?></h1>
+          <h2 class="txt-blue"><?= $lang['whereIWorked']; ?></h2>
+          <p>
+            <span class="font-weight-bold">Feb. - Jun. | 2021</span><br>
+            <a href="https://ultimaker.com/"><span style="color: #196ef0;" class="font-weight-bold">Ultimaker</span></a><br>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <span class="font-italic">Stage programmeur</span><br>
+              • Programmeren frontend en backend Phillips Hue<br>
+            <?php } else { ?>
+              <span class="font-italic">Internship programmer</span><br>
+              • Programming front and backend for Phillips Hue<br>
+            <?php } ?>
+          </p>
           <p>
             <span class="font-weight-bold">Nov. 2013 - Feb. 2021</span><br>
-            Verhuisboxen BV. | Logistiek medewerker
+            <a href="https://www.verhuisboxen.nl/"><span style="color: #343a40;" class="font-weight-bold">Verhuisboxen</span></a><br>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <span class="font-italic">Verkoopmedewerker, Magazijnmedewerker</span><br>
+              • Verkopen van verhuisdozen en materialen<br>
+              • Voorraden aanvullen in het magazijn<br>
+              • Meedenken aan optimalisatie van het werk<br>
+            <?php } else { ?>
+              <span class="font-italic">Sales assistent , Warehouse worker</span><br>
+              • Selling of moving boxes and materials<br>
+              • Replenishing warehouse stock<br>
+              • Contribute to work optimisation<br>
+            <?php } ?>
           </p>
           <p>
             <span class="font-weight-bold">Sept. - Dec. | 2019</span><br>
-            <a href="https://www.q42.nl/werk/philips-hue"><span style="color: #84bc2d;" class="font-weight-bold">Q42</span></a> | Stagair medewerker (Philips Hue)
+            <a href="https://www.q42.nl/werk/philips-hue"><span style="color: #84bc2d;" class="font-weight-bold">Q42</span></a><br>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <span class="font-italic">Stage programmeur</span><br>
+              • Programmeren frontend en backend Phillips Hue<br>
+            <?php } else { ?>
+              <span class="font-italic">Internship programmer</span><br>
+              • Programming front and backend for Phillips Hue<br>
+            <?php } ?>
           </p>
           <p>
-            <span class="font-weight-bold">11 dagen/jaar | 2015, 2016, 2018</span><br>
-            Speelin | Vrijwilliger huttenbouw
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <span class="font-weight-bold">11 dagen/jaar | 2015, 2016, 2018</span><br>
+              <a href="https://speelin.nl/"><span style="color: #852585;" class="font-weight-bold">Speelin</span></a><br>
+              <span class="font-italic">Vrijwilliger huttenbouw</span><br>
+              • Op en afbouwen Speel-In evenement<br>
+              •	Toezicht houden op en helpen van kinderen bij het huttenbouwen<br>
+            <?php } else { ?>
+              <span class="font-weight-bold">11 days/jear | 2015, 2016, 2018</span><br>
+              <a href="https://speelin.nl/"><span style="color: #852585;" class="font-weight-bold">Speelin</span></a><br>
+              <span class="font-italic">Volunteer hut building</span><br>
+              •	Setting up and cleaning up Speel-In event<br>
+              •	Supervise and assist children in hut building<br>
+            <?php } ?>
           </p>
         </div>
       </div>
     </div>
-    
+
     <!-- Portfolio -->
     <div class="bg-blue">
       <div class="container-flex">
         <div class="row justify-content-center">
           <div class="text-center">
             <h1 class="txt-name">PORTFOLIO</h1>
-            <h2 class="text-light">RECENTE PROJECTEN
+            <h2 class="text-light text-uppercase"><?= $lang['recentProjects']; ?>
               <span class="txt-blue-darkest">|</span>
-              <a href="./projects.php" class="text-muted">MEER
+              <a href="./projects.php?lang=<?= $_SESSION['lang'];?>" class="txt-grey text-uppercase"><?= $lang['more']; ?>
                 <i class="material-icons">arrow_forward_ios</i>
               </a>
             </h2>
@@ -136,7 +189,7 @@
             <h2 class="my-2">School</h2>
             <img src="/content/projecten/school/live_inc/header.png" class="img-fluid rounded" alt="Live Inc.">
             <p>Live Inc.</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark" href="./projects.php#school">MEER
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#school"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
@@ -144,26 +197,30 @@
           <div class="col-md-5 col-xl m-1 mb-3 bg-white text-center shadow infobox">
             <h2 class="my-2">Hobby</h2>
             <img src="/content/projecten/misc/kart_auto/header.png" class="img-fluid rounded" alt="ClassroomVR">
-            <p>Kart auto</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark" href="./projects.php#misc">MEER
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <p>Kart auto</p>
+            <?php } else { ?>
+              <p>Go Kart</p>
+            <?php } ?>
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#misc"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
           <!-- project 3 -->
           <div class="col-md-5 col-xl m-1 mb-3 bg-white text-center shadow infobox">
-            <h2 class="my-2">Electronica</h2>
+            <h2 class="my-2"><?= $lang['electronics']; ?></h2>
             <img src="/content/projecten/hardware/racing_dash/header.png" class="img-fluid rounded" alt="ClassroomVR">
             <p>Simpit dashboard</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark" href="./projects.php#hardware">MEER
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#hardware"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
           <!-- project 4 -->
           <div class="col-md-5 col-xl m-1 mb-3 bg-white text-center shadow infobox">
-            <h2 class="my-2">3D printen</h2>
+            <h2 class="my-2"><?= $lang['3DPrinting']; ?></h2>
             <img src="/content/projecten/3d_printer/rovexyz/header.png" class="img-fluid rounded" alt="ClassroomVR">
-            <p>Eigen 3D printer</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark" href="./projects.php#3D_print">MEER
+            <p>3D printer</p>
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#3D_print"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
@@ -173,123 +230,108 @@
 
     <!-- Ervaring -->
     <div class="container">
-      <h1 class="txt-blue">VAARDIGHEDEN EN COMPETENTIES</h1>
-      <p class="txt-blue-dark">Ik heb met verschillende dingen ervaring. Hieronder een overzichtje van verschillende vaardigheden en wat ik er mee gedaan heb.</p>
+      <h1 class="txt-blue text-uppercase"><?= $lang['skills']; ?></h1>
+      <p class="txt-blue-dark">
+        <?php if ($_SESSION['lang'] == "nl") { ?>
+          Ik heb met verschillende dingen ervaring. Hieronder een overzichtje van verschillende vaardigheden en wat ik er mee gedaan heb.
+        <?php } else { ?>
+          I have experience with a lot of different programming languages, tools and other stuff. Below you will find a list with a general overview of what I did.
+        <?php } ?>
+      </p>
       <!-- Programmeer talen -->
       <div class="row">
         <p>
-          <span class="font-weight-bold txt-blue">Programmeertalen</span><br>
-          Tijdens het programmeren probeer ik altijd nieuwe technieken te leren en probeer ik aan veiligheid te denken
+          <span class="font-weight-bold txt-blue"><?= $lang['programmingLanguages']; ?></span><br>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            Tijdens het programmeren probeer ik altijd nieuwe technieken te leren en probeer ik aan veiligheid te denken.<br>
+            Hoewel ik met veel talen ervaring heb wil dit niet zeggen dat ik ook graag met deze talen bezig ben. 
+            Vanuit mijn opleiding is er veel gewerkt met bijvoorbeeld websites waarbij talen als HTML, CSS en PHP gebruikt werden. 
+            Hier heb ik dus veel projecten mee gedaan maar hier had ik niet veel plezier in. Ik wil geen webdeveloper worden.
+            Met talen als C++, C en C# heb ik bijvoorbeeld voor mijzelf heel veel projecten mee gedaan omdat ik dit fijn vind om te doen.
+          <?php } else { ?>
+            While programming, I always try to learn new techniques and try to think about security.<br>
+            Although I have experience with many languages, this does not mean that I also enjoy working with these languages.
+            During my education I worked a lot with, for example, websites where languages ​​such as HTML, CSS and PHP were used.
+            So I did a lot of projects with this, but I didn't enjoy it much. I don't want to be a web developer.
+            For example, I have done many projects for myself with languages ​​such as C++, C and C# because I enjoy doing this.
+          <?php } ?>
         </p>
         <table class="table table-sm">
           <thead>
             <tr>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               <th scope="col">Taal</th>
               <th scope="col">Kennisniveau</th>
               <th scope="col">Aantal projecten</th>
               <th scope="col">Motivatie</th>
-              <th scope="col">Programmeer plezier</th>
+            <?php } else { ?>
+              <th scope="col">Language</th>
+              <th scope="col">Knowlage</th>
+              <th scope="col">Projects</th>
+              <th scope="col">Motivation</th>
+            <?php } ?>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Java</th>
-              <td>Basis</td>
-              <td>1</td>
-              <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <th scope="row">C#</th>
+              <td><?= $lang['comfortable']; ?></td>
+              <td>+/- 6</td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
             </tr>
             <tr>
-              <th scope="row">PHP</th>
-              <td>Gemiddeld</td>
-              <td>+/- 5</td>
-              <td>School | Eigen interesse | Professioneel</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">SQL</th>
-              <td>Gemiddeld</td>
-              <td>+/- 5</td>
-              <td>School | Eigen interesse | Professioneel</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">HTML</th>
-              <td>Gemiddeld</td>
-              <td>+/- 8</td>
-              <td>School | Eigen interesse | Professioneel</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">CSS</th>
-              <td>Basis</td>
-              <td>+/- 8</td>
-              <td>School | Professioneel</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Python</th>
-              <td>Basis</td>
-              <td>2</td>
-              <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">C | C++ | C#</th>
-              <td>Comfortabel</td>
+              <th scope="row">C/C++</th>
+              <td><?= $lang['comfortable']; ?></td>
               <td>20 +</td>
-              <td>School | Eigen interesse</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <td>School | <?= $lang['ownInterest']; ?></td>
             </tr>
             <tr>
               <th scope="row">Typescript</th>
-              <td>Gemiddeld</td>
+              <td><?= $lang['average']; ?></td>
               <td>+/- 6</td>
               <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
             </tr>
             <tr>
               <th scope="row">Javascript</th>
-              <td>Gemiddeld</td>
+              <td><?= $lang['average']; ?></td>
               <td>+/- 8</td>
-              <td>School | Eigen interesse | Professioneel</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">PHP</th>
+              <td><?= $lang['average']; ?></td>
+              <td>+/- 5</td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">SQL</th>
+              <td><?= $lang['average']; ?></td>
+              <td>+/- 5</td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">HTML</th>
+              <td><?= $lang['average']; ?></td>
+              <td>+/- 8</td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">CSS</th>
+              <td><?= $lang['basic']; ?></td>
+              <td>+/- 8</td>
+              <td>School | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">Python</th>
+              <td><?= $lang['basic']; ?></td>
+              <td>4</td>
+              <td>School | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">Java</th>
+              <td><?= $lang['basic']; ?></td>
+              <td>1</td>
+              <td>School</td>
             </tr>
           </tbody>
         </table>          
@@ -298,62 +340,52 @@
       <div class="row">
         <p>
           <span class="font-weight-bold txt-blue">Databases</span><br>
-          Bij verschillende projecten heb ik met databases gewerkt.
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            Bij verschillende projecten heb ik met de volgende databases gewerkt.
+          <?php } else { ?>        
+            On several projects I have worked with the following databases.
+          <?php } ?>
         </p>
         <table class="table table-sm">
           <thead>
             <tr>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               <th scope="col">Type</th>
               <th scope="col">Kennisniveau</th>
               <th scope="col">Aantal projecten</th>
               <th scope="col">Motivatie</th>
-              <th scope="col">Programmeer plezier</th>
+            <?php } else { ?>
+              <th scope="col">Type</th>
+              <th scope="col">Knowlage</th>
+              <th scope="col">Projects</th>
+              <th scope="col">Motivation</th>
+            <?php } ?>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">MySQL</th>
-              <td>Comfortabel</td>
+              <td><?= $lang['comfortable']; ?></td>
               <td>+/- 5</td>
               <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
             </tr>
             <tr>
               <th scope="row">MongoDB</th>
-              <td>Basis</td>
+              <td><?= $lang['basic']; ?></td>
               <td>1</td>
               <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
             </tr>
             <tr>
               <th scope="row">Google Big Query</th>
-              <td>Basis</td>
+              <td><?= $lang['basic']; ?></td>
               <td>1</td>
               <td>School (Stage)</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
             </tr>
             <tr>
               <th scope="row">Datadog</th>
-              <td>Comfortabel</td>
+              <td><?= $lang['comfortable']; ?></td>
               <td>1</td>
               <td>School (Stage)</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
             </tr>
           </tbody>
         </table>          
@@ -361,63 +393,59 @@
       <!-- Platformen -->
       <div class="row">
         <p>
-          <span class="font-weight-bold txt-blue">Platformen</span><br>
-          Ik heb voor verschillende platformen ontwikkeld.
+          <span class="font-weight-bold txt-blue"><?= $lang['platforms']; ?></span><br>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+              Ik heb voor verschillende platformen ontwikkeld.
+            <?php } else { ?>
+              I have developed applications for the following platforms.
+            <?php } ?>
         </p>
         <table class="table table-sm">
           <thead>
             <tr>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               <th scope="col">Platform</th>
               <th scope="col">Kennisniveau</th>
               <th scope="col">Aantal projecten</th>
               <th scope="col">Motivatie</th>
-              <th scope="col">Programmeer plezier</th>
+            <?php } else { ?>
+              <th scope="col">Platform</th>
+              <th scope="col">Knowlage</th>
+              <th scope="col">Projects</th>
+              <th scope="col">Motivation</th>
+            <?php } ?>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Ubuntu server</th>
-              <td>Basis</td>
-              <td>1</td>
-              <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <th scope="row">Arduino / ESP32</th>
+              <td><?= $lang['comfortable']; ?></td>
+              <td>20 +</td>
+              <td>School | <?= $lang['ownInterest']; ?></td>
             </tr>
             <tr>
-              <th scope="row">Arduino</th>
-              <td>Comfortabel</td>
-              <td>20 +</td>
-              <td>School | Eigen interesse</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <th scope="row">Windows</th>
+              <td><?= $lang['comfortable']; ?></td>
+              <td>6</td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
             </tr>
             <tr>
               <th scope="row">Raspberry Pi</th>
-              <td>Gemiddeld</td>
+              <td><?= $lang['average']; ?></td>
               <td>2</td>
-              <td>School | Eigen interesse | Professioneel</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">Ubuntu server</th>
+              <td><?= $lang['basic']; ?></td>
+              <td>1</td>
+              <td>School</td>
             </tr>
             <tr>
               <th scope="row">Android</th>
-              <td>Basis</td>
+              <td><?= $lang['basic']; ?></td>
               <td>1</td>
               <td>School</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
             </tr>
           </tbody>
         </table>          
@@ -426,51 +454,46 @@
       <div class="row">
         <p>
           <span class="font-weight-bold txt-blue">3D modeling</span><br>
-          Ik heb verschillende 3D modeling programmas gebruikt. Zo doe ik veel CAD design voor 3D print projecten.
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+              Ik heb verschillende 3D modeling programmas gebruikt. Zo doe ik veel CAD design voor 3D print projecten.
+            <?php } else { ?>
+              I have used several 3D modeling programs. I mostly do CAD design for 3D printed objects.
+            <?php } ?>
         </p>
         <table class="table table-sm">
           <thead>
             <tr>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               <th scope="col">Programma</th>
               <th scope="col">Kennisniveau</th>
               <th scope="col">Aantal projecten</th>
               <th scope="col">Motivatie</th>
-              <th scope="col">modelleer plezier</th>
+            <?php } else { ?>
+              <th scope="col">Program</th>
+              <th scope="col">Knowlage</th>
+              <th scope="col">Projects</th>
+              <th scope="col">Motivation</th>
+            <?php } ?>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Autodesk Fusion 360</th>
-              <td>Comfortabel</td>
+              <td><?= $lang['comfortable']; ?></td>
               <td>20 +</td>
-              <td>Eigen interesse</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <td>School | <?= $lang['ownInterest']; ?></td>
             </tr>
             <tr>
               <th scope="row">Google Sketchup</th>
-              <td>Comfortabel</td>
+              <td><?= $lang['comfortable']; ?></td>
               <td>10 +</td>
-              <td>Eigen interesse</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <td><?= $lang['ownInterest']; ?></td>
             </tr>
             <tr>
               <th scope="row">Blender</th>
-              <td>Basis</td>
+              <td><?= $lang['basic']; ?></td>
               <td>2</td>
-              <td>School | Eigen interesse</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar bg-blue" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </td>
+              <td>School | <?= $lang['ownInterest']; ?></td>
             </tr>
           </tbody>
         </table>          
@@ -479,13 +502,23 @@
       <div class="row">
         <p>
           <span class="font-weight-bold txt-blue">Skills</span><br>
-          En dan als laatste nog een paar skills die ik bevat.<br>
-          <span class="font-weight-bold">Talen</span><br>
-          Engels | Nederlands<br>
-          <span class="font-weight-bold">Machinebeheer</span><br>
-          Auto | Heftruck | Reachtruck | 3D printer<br>
-          <span class="font-weight-bold">Grafisch ontwerp</span><br>
-          Adobe Photoshop | Adobe Illustrator | Adobe XD<br>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              En dan als laatste nog een paar skills die ik bevat.<br>
+              <span class="font-weight-bold">Talen</span><br>
+              Engels | Nederlands<br>
+              <span class="font-weight-bold">Machinebeheer</span><br>
+              Auto | Heftruck | Reachtruck | 3D printer<br>
+              <span class="font-weight-bold">Grafisch ontwerp</span><br>
+              Adobe Photoshop | Adobe Illustrator | Adobe XD<br>
+            <?php } else { ?>
+              Some miscellaneous skills i have.<br>
+              <span class="font-weight-bold">Languages</span><br>
+              English | Dutch<br>
+              <span class="font-weight-bold">Machines</span><br>
+              Car | Forklift | Reachtruck | 3D printer<br>
+              <span class="font-weight-bold">Graphical design</span><br>
+              Adobe Photoshop | Adobe Illustrator | Adobe XD<br>
+            <?php } ?>
         </p>
       </div>
     </div>
@@ -495,58 +528,49 @@
       <div class="container">
         <div class="row mx-5">
           <div class="col mt-3">
-            <h1 class="font-weight-bold text-light">INTERESSES</h1>
-            <h2 class="text-muted">Buiten werk</h2>
+            <h1 class="font-weight-bold text-light text-uppercase"><?= $lang['interests']; ?></h1>
+            <h2 class="txt-grey"><?= $lang['outsideWork']; ?></h2>
           </div>
         </div>
         <div class="row mx-5">
           <div class="col">
             <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               CAD ontwerp<br>
               3D printer<br>
               Gamen<br>
               Computers samenstellen & bouwen
+            <?php } else { ?>
+              CAD design<br>
+              3D printer<br>
+              Gaming<br>
+              Building custom gaming computers
+            <?php } ?>
             </p>
           </div>
           <div class="col text-right">
             <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               Arduino<br>
               Technische hulp<br>
               Video editen<br>
               Muziek maken<br>
+            <?php } else { ?>
+              Arduino<br>
+              General technical support<br>
+              Video editing<br>
+              Making music<br>
+            <?php } ?>
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Contact -->
-    <div class="container">
-      <div class="row mx-5 mt-3">
-        <div class="col">
-          <h1 class="font-weight-bold">CONTACT</h1>
-        </div>
-      </div>
-      <div class="row mx-5">
-        <div class="col">
-          <h2>Ik hoor graag van je</h2>
-          <a href="https://www.facebook.com/roel.versteeg" rel="noopener noreferrer" target="_blank"><img class="socialicons pr-1" src="/content/logos/icon_facebook.svg"></a>
-          <a href="https://www.youtube.com/user/roel0099" rel="noopener noreferrer" target="_blank"><img class="socialicons pr-1" src="/content/logos/icon_youtube.svg"></a>
-          <a href="https://www.instagram.com/roelversteeg/" rel="noopener noreferrer" target="_blank"><img class="socialicons pr-1" src="/content/logos/icon_instagram.svg"></a>
-          <a href="https://twitter.com/Roel_Versteeg" rel="noopener noreferrer" target="_blank"><img class="socialicons pr-1" src="/content/logos/icon_twitter.svg"></a>
-          <a href="https://www.linkedin.com/in/roel-v-a66773124/" rel="noopener noreferrer" target="_blank"><img class="socialicons pr-1" src="/content/logos/icon_linkedin.svg"></a>
-          <a href="https://github.com/Rovexx" rel="noopener noreferrer" target="_blank"><img class="socialicons pr-1" src="/content/logos/icon_github.svg"></a>
-        </div>
-        <div class="col text-center mb-3">
-          <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark" href="/content/bestanden/CV_Roel_Versteeg.pdf" download>DOWNLOAD CV</a>
-          <a href="mailto:roel.versteeg@hotmail.com" class="txt-blue">roel.versteeg@hotmail.com</a>
-        </div>
-      </div>
-    </div>
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once 'includes/footer.html';?>
+      <?php include_once 'includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once 'includes/scripts.html';?>

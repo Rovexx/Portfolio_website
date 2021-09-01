@@ -18,16 +18,16 @@
           <?php } ?>
         <div class="dropdown-menu" aria-labelledby="dropdown">
           <?php if ($_SESSION['lang'] == "en") { ?>
-            <a class="dropdown-item" href="?lang=nl"><span class="flag-icon flag-icon-nl"> </span>  Nederlands</a>
+            <a class="dropdown-item" href="?lang=nl"><span class="flag-icon flag-icon-nl"> </span> Dutch</a>
           <?php } else { ?>
-            <a class="dropdown-item" href="?lang=en"><span class="flag-icon flag-icon-en"> </span>  English</a>
+            <a class="dropdown-item" href="?lang=en"><span class="flag-icon flag-icon-us"> </span> Engels</a>
           <?php } ?>
         </div>
       </li>
       
-      <a class="nav-item nav-link" href="index.php" id="nav_home">Home</a>
-      <a class="nav-item nav-link" href="projects.php" id="nav_projects"><?= $lang['projects']; ?></a>
-      <a class="nav-item nav-link" href="contact.php" id="nav_contact">Contact</a>
+      <a class="nav-item nav-link" href="/index.php?lang=<?= $_SESSION['lang'];?>" id="nav_home">Home</a>
+      <a class="nav-item nav-link" href="/projects.php?lang=<?= $_SESSION['lang'];?>" id="nav_projects"><?= $lang['projects']; ?></a>
+      <a class="nav-item nav-link" href="/contact.php?lang=<?= $_SESSION['lang'];?>" id="nav_contact">Contact</a>
     </div>
   </div>
 </nav>

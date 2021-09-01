@@ -15,6 +15,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Bob the Robber is een game voor Android telefoons die is ontwikkeld voor mijn Minor Game Design & Development. Ik zat hierbij in een team van 4, waarbij ik de rol van programmeur had.<br>
               Ik heb voor dit project mij bezig gehouden met het opzetten van de GitHub workflow voor Unity, code conventions en het programmeren van gameplay en visuals.<br>
@@ -24,12 +25,27 @@
               Bewakers, camera en lazers zullen het je lastig maken om te ontsnappen met de buit.<br>
               <br>
             </p>
+          <?php } else { ?>
+            <p>
+              Bob the Robber is a game for Android phones that was developed for my Minor Game Design & Development. I was part of a team of 4, where I had the role of programmer.<br>
+              For this project I was involved in setting up the GitHub workflow for Unity, code conventions and programming gameplay and visuals.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              Bob the Robber is an action adventure game where you play as the thief Bob to steal valuable items and escape from difficult situations.
+              Guards, camera and lasers will make it difficult for you to escape with the loot.<br>
+              <br>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Links -->
         <div class="row justify-content-md-center text-light">
           <p>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             Vind de game op de Play store
+          <?php } else { ?>
+            Find the game on the Play store
+          <?php } ?>
             <a href="https://play.google.com/store/apps/details?id=com.ThumbsUpGames.BobTheRobber&hl=nl&gl=US" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_playstore.svg">Bob the Robber</a>
           </p>
         </div>
@@ -98,11 +114,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -110,7 +126,7 @@
             <p class="text-left text-light">
               Minor<br>
               C#<br>
-              6 weken<br>
+              6 <?= $lang['weeks']; ?><br>
               Unity<br>
               Android
             </p>
@@ -121,7 +137,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

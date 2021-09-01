@@ -7,6 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Star Citizen control panel</h1>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+
+          <?php } else { ?>
+
+          <?php } ?>
           <h3>Knoppen paneel voor het spel Star Citizen</h3>
         </div>
       </div>
@@ -15,6 +20,11 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+
+          <?php } else { ?>
+
+          <?php } ?>
             <p>
               Het spel Star Citizen is een van mijn favoriete spellen, het heeft echter 1 probleem. Je hebt alle knoppen op je toetsen bord x3 nodig. 
               Ik heb dus besloten om een knoppendoos te maken die te gebruiken is met dit spel.<br>
@@ -100,7 +110,7 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
+            <p class="font-weight-bolder text-right text-uppercase">
               OPDRACHTGEVER<br>
               PROJECT DUUR<br>
               PROGRAMMAS<br>
@@ -121,7 +131,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

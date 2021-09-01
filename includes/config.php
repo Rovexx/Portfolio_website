@@ -16,5 +16,5 @@
     }
   }
 
-  require_once "lang/" . $_SESSION['lang'] . ".php";
+  require_once $_SERVER['DOCUMENT_ROOT']."/lang/" . $_SESSION['lang'] . ".php";
 ?>

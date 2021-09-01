@@ -16,6 +16,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               ClassroomVR is een virtual reality applicatie voor Google Cardboard headsets.<br>
               Met de applicatie kun je als docent lesgeven aan je studenten in een virtuele klas.<br>
@@ -36,12 +37,38 @@
               De demo die ik heb gemaakt heeft multiplayer met tweewegs audio communicatie.
               De docent kan ook de leerlingen muten om zo de rust in de virtuele klas te behouden.
             </p>
+          <?php } else { ?>
+            <p>
+              ClassroomVR is a virtual reality application for Google Cardboard headsets.<br>
+              The application allows you as a teacher to teach your students in a virtual classroom.<br>
+              <br>
+              By taking a class in VR, teachers and students no longer have to travel to a school building and you can take classes from the comfort of your own home.<br>
+              <br>
+              This project was my first introduction to Unity and Blender for the 3D models.<br>
+              I immediately jumped into the deep end by creating a VR application with multiplayer and audio communication.
+            </p>
+            <h3>Features</h3>
+            <p>
+              With ClassroomVR you have the possibility to completely customize the virtual environment so that it fits perfectly with the lesson.<br>
+              Teach in a normal classroom, tour a building to learn about architecture, or visit the ISS!<br>
+              <br>
+              The interaction works through a gaze interaction.
+              Stare at an object and after a certain amount of time you activate the interaction, which can be teleporting to a chair or pressing a button.<br>
+              <br>
+              The demo I made has multiplayer with two-way audio communication.
+              The teacher can also mute the students to maintain peace in the virtual classroom.
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Links -->
         <div class="row justify-content-md-center text-light">
           <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
             De code voor dit project is te vinden op GitHub
+            <?php } else { ?>
+              The code for this project can be found on my GitHub
+            <?php } ?>
             <a href="https://github.com/Rovexx/ClassroomVR" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_github.svg">Classroom VR</a>
           </p>
         </div>
@@ -93,11 +120,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -116,7 +143,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

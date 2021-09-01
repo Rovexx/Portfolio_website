@@ -7,6 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Racing dashboard</h1>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+
+          <?php } else { ?>
+
+          <?php } ?>
           <h3>Hardware display voor in-game racing informatie</h3>
         </div>
       </div>
@@ -15,6 +20,11 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+
+          <?php } else { ?>
+
+          <?php } ?>
             <p>
               Ik hou van racing games. En toen ik een keer een video zag van een dashboard die reageerde op informatie uit een game wist ik dat ik dit ook wilde bouwen.<br>
               Het programma achter dit princiepe heet SimHub. Dit programma luistert naar de informatie die de game in het RAM geheugen van de computer zet en kan deze informatie doorsturen naar een Arduino.
@@ -86,7 +96,7 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
+            <p class="font-weight-bolder text-right text-uppercase">
               OPDRACHTGEVER<br>
               PROGRAMMEER TAAL<br>
               PROJECT DUUR<br>
@@ -109,7 +119,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

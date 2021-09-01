@@ -2,9 +2,7 @@
   --blue-1: #008ab6;
   --blue-2: #007cc8;
   --blue-3: #0068C6;
-  --green-1: #11a42f;
-  --green-2: #009f63;
-  --green-3: #009692;
+  --grey: #d5dde6;
 }
 body, html {
   font-family: 'Work Sans', sans-serif;
@@ -24,14 +22,8 @@ body, html {
 .bg-blue-darkest {
   background-color: var(--blue-3);
 }
-.bg-green {
-  background-color: var(--green-1);
-}
-.bg-green-darker {
-  background-color: var(--green-2);
-}
-.bg-green-darkest {
-  background-color: var(--green-3);
+.bg-grey {
+  background-color: var(--grey);
 }
 
 /* Text modifiers */
@@ -44,8 +36,8 @@ body, html {
 .txt-blue-darkest {
   color: var(--blue-3);
 }
-.txt-green {
-  color: var(--green-1);
+.txt-grey {
+  color: var(--grey);
 }
 .txt-name {
   font-family: 'Montserrat', sans-serif;

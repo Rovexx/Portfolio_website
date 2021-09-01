@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Suggist</h1>
-          <h3>Suggesteer menu items voor bij jouw biertje</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Suggesteer menu items voor bij jouw biertje</h3>
+          <?php } else { ?>
+            <h3>Suggest menu items for your beer</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Mijn opleiding kwam met de opdracht om een smart object te maken voor een bar, kledingwinkel of sportclub.
               Ik heb met mijn team van 3 andere studenten ervoor gekozen om een smart object te maken voor een bar in Rotterdam.<br>
@@ -33,6 +38,26 @@
               Leer programeren voor Arduino.<br>
               Leer werken met Arduino en LCD schermen.<br>
             </p>
+          <?php } else { ?>
+            <p>
+              My study came with the assignment to create a smart object for a bar, clothing store or sports club.
+              I and my team of 3 other students chose to make a smart object for a bar in Rotterdam.<br>
+              <br>
+              <span class="font-weight-bold">concept</span><br>
+              Our concept was to create a suggestion box that gives a suggestion for a drink or some food.
+              The bar we make this for specialized in specialty beer and that's why we named our device the suggist.
+              By going through a simple menu, the user immediately knows the options on the menu and gets a suggestion for the chosen category.<br>
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              I've been working on the code for the Arduino on which this smart object runs.
+              This code is for the menu displayed on 2 LCD screens. The Arduino also reads the button input to navigate the menu.<br>
+            </p>
+            <h3>Learning objectives</h3>
+            <p>
+              Learn to program for Arduino.<br>
+              Learn to work with Arduino and LCD screens.<br>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Video -->
@@ -79,11 +104,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -91,7 +116,7 @@
             <p class="text-left text-light">
               School<br>
               C/C++<br>
-              3 weken<br>
+              3 <?= $lang['weeks']; ?><br>
               -<br>
               Arduino
             </p>
@@ -102,7 +127,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

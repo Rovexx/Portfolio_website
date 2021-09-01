@@ -7,6 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Leaseplan Quicklease Fleet</h1>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+
+          <?php } else { ?>
+
+          <?php } ?>
           <h3>AI gestuurd optimalisatie systeem voor fiets-leasen</h3>
         </div>
       </div>
@@ -15,6 +20,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Leaseplan had voor mijn opleiding een opdracht. Bedenk iets voor Leaseplan wat te maken heeft met kunstmatige intelligentie of AI.<br>
               Dit project heb ik in een team met nog 3 studenten gedaan.<br>
@@ -42,6 +48,35 @@
               Data omzetten voor gebruik met AI<br>
               AI applicatie maken die een voorspelling kan maken.
             </p>
+          <?php } else { ?>
+            <p>
+              Leaseplan had an assignment for my study. Think of something for Leaseplan that has to do with artificial intelligence or AI.<br>
+              I did this project in a team with 3 other students.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              Our concept was a bicycle lease system in which the supply of the bicycles was arranged with the help of AI.<br>
+              So I first had to devise the bicycle lease system with the team, which we named Quicklease.
+              We call the system behind the supply Quicklease Fleet.<br>
+              Every Rotterdam University of Applied Sciences will have a place where bicycles can be used. A student can take a bicycle with his University pass.<br>
+              <br>
+              The system collects data from various sources. For example, it collects weather data, number of students at university locations, number of bicycles on location, periods of crowds and public transport delays.
+              All this data is then processed so that the AI ​​can use it to make a prediction for the number of bicycles needed at all HR locations.
+              This prediction is then forwarded to the person supplying the bikes at all locations.
+              With this system, there will always be exactly enough bicycles available at a location.<br>
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              With this project I have been involved with everything related to AI. I started looking for the sources of data that our AI needs and how we can turn this data into something the AI ​​can do something with.<br>
+              I also researched AI libraries that I could use to predict data.<br>
+              Then I got to work programming the AI ​​so that it can give us a prediction for the number of bikes that will be needed at all locations.
+              At the end of this project, my AI code was able to provide a prediction with our test data that matched 90-95% of what we expected.
+            </p>
+            <h3>Learning objectives</h3>
+            <p>
+              Finding data sources for AI<br>
+              Converting data for use with AI<br>
+              Create an AI application that can make a prediction.
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Video -->
@@ -96,11 +131,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -108,7 +143,7 @@
             <p class="text-left text-light">
               School | Leaseplan<br>
               Javascript<br>
-              1 kwartaal<br>
+              1 <?= $lang['quarter']; ?><br>
               -<br>
               BrainJS
             </p>
@@ -119,7 +154,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

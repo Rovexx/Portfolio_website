@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Deltec telepresence robot</h1>
-          <h3>Telepresence robot voor langdurig zieke studenten</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Telepresence robot voor langdurig zieke studenten</h3>
+          <?php } else { ?>
+            <h3>Telepresence robot for long-term sick students</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Vanuit het Honours programma van mijn opleiding kwam de opdracht om een telepresence robot te maken voor studenten die langdurig ziek thuis zitten. 
               De opdracht gever voor dit project was Creating 010. Er was een bestaande robot die gebruikt werd binnen de hogeschool voor deze situatie, de AV1 robot, maar deze was zeer prijzig.
@@ -37,19 +42,47 @@
               De robot is te besturen via de gebruikers interface doormiddel van knoppen die alle onderdelen aansturen.<br>
               Zo kan de gebruiker bijvoorbeeld verschillende animaties laten zien op de ogen, de robot laten rijden of de camera op de robot bewegen.
             </p>
+          <?php } else { ?>
+            <p>
+              From the Honors program of my study program came the assignment to make a telepresence robot for students who are sick at home for a long time.
+              The client for this project was Creating 010. There was an existing robot that was used within the university for this situation, the AV1 robot, but it was very expensive.
+              I have followed this project for 2 quarters with 2 different teams.
+              The purpose of the telepresence robot was to place the robot in the classroom so that the student who is sick at home can be present in the classroom via the robot.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              I came up with the Deltec robot with my team. This is a fully modular concept for a telepresence robot that is sustainable by making the entire housing from biodegradable PLA material using 3D printers.
+              The robot gets different modules, such as eyes and wheels, that the user can replace to assemble the robot according to his usage scenario and budget.
+              All parts used can also be purchased by the user and replaced by themselves. I came up with this principle to support the "Right to repair" movement.<br>
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              I made the design of the robot in Autodesk Fusion 360 and also 3D printed the model.
+              I also sorted out all the hardware needed and mounted it into the robot.
+              I also wrote the code that runs on the robot to control all parts.<br>
+            </p>
+            <h3>Features</h3>
+            <p>
+              The robot has a network connection for the built-in two-way audio and video communication and for feedback of actions to the user interface.<br>
+              The robot can be controlled via the user interface by means of buttons that control all parts.<br>
+              For example, the user can show different animations on the eyes, make the robot drive or move the camera on the robot.
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Links -->
         <div class="row justify-content-md-center text-light">
           <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
             De code voor dit project is te vinden op GitHub
+          <?php } else { ?>
+            The code for this project can be found on my GitHub
+          <?php } ?>
             <a href="https://github.com/Rovexx/Deltec_robot" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_github.svg">Deltec</a>
           </p>
         </div>
         <div class="row">
           <!-- Eyes images -->
           <div class="col">
-            <h3 class="text-center">Oog modules</h3>
+            <h3 class="text-center">Eye modules</h3>
             <div id="carouselIndicators_1" class="carousel slide carousel-fade" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselIndicators_1" data-slide-to="0" class="active"></li>
@@ -133,7 +166,7 @@
           </div>
         </div>
         <!-- Images -->
-        <h3 class="text-center my-5">De Deltec robot</h3>
+        <h3 class="text-center my-5">Deltec robot</h3>
         <div id="carouselIndicators_3" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselIndicators_3" data-slide-to="0" class="active"></li>
@@ -162,11 +195,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -185,7 +218,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

@@ -15,6 +15,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               Live inc. is een pc game die ik meegeholpen heb te ontwikkelen tijden mijn minor Game Design & Development. Deze game heb ik in een team van 16 studenten gemaakt waarbij ik een van de programmeurs was.<br>
               Ik ben bij dit project voornramelijk verantwoordelijk geweest voor de multiplayer en stem communicatie. Hiernaast heb ik ook verschillende gameplay mechanieken geimplementeerd en de verlichting binnen de game gedaan.<br>
@@ -45,13 +46,49 @@
               </p>
               <br>
             </p>
+          <?php } else { ?>
+            <p>
+              Live Inc. is a PC game that I helped develop during my minor Game Design & Development. I made this game in a team of 16 students where I was one of the programmers.<br>
+              On this project I was mainly responsible for the multiplayer and voice communication. In addition, I also implemented various gameplay mechanics and implemented the lighting within the game.<br>
+              <br>
+              <span class="font-weight-bold">Concept</span><br>
+              Live Inc. is a 2 vs 2 multiplayer game set in the 80s. It involves 2 teams, the infiltrators who have to break into an office of the corporation Live Inc to collect evidence that the company has bad intentions.<br>
+              The opposing team takes on the role of Live Inc.'s security and has to catch the opposing team.<br>
+              <br>
+              <span class="font-weight-bold">Mijn taken</span><br>
+              During this project I looked at how I could implement multiplayer in a Unity game. I chose to use SteamWorks and Mirror for this purpose.
+              These are frameworks that make it possible to create a multiplayer game without having to host a server, or let your player do port-forwarding.<br>
+              <br>
+              For the voice communication in the game I used Dissonance, a free framework for communication that works together with Mirror and SteamWorks.<br>
+              <br>
+              Besides the multiplayer and voice communication I also implemented various gameplay mechanics in the game, created the menu and set up the code conventions and workflow for the rest of the team.
+              With the conventions and workflow documents I made it as easy as possible to convert the requirements of the game designers into an implementation that the programmers could make.
+              In this document various things were mentioned, from which Unity version we are using to syntax and guides for using and creating GitHub issues and Pull Requests.<br>
+              <br>
+              For this game I also made 2 soundtracks that can be found on the 
+              <a href="https://www.youtube.com/watch?v=R0EKed7Squc&list=PLql4MkHYnMEtQP7HpudUVE7OzyDsVmMfO&ab_channel=MaestroGames" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_youtube.svg">Youtube</a>
+              channel of the game.
+              <h3>Learning goals</h3>
+              <p>
+                Get experience with Unity game development for PC.<br>
+                Multiplayer in Unity with SteamWorks.<br>
+                Voice communication in Unity.<br>
+                Gain experience working in a larger game development team<br>
+              </p>
+              <br>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Links -->
         <div class="row justify-content-md-center text-light">
           <div class="col-sm">
             <p>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
               Informatie over de game is op verschillende locaties te vinden:
+            <?php } else { ?>
+              Information about the game can be found on multiple platforms:
+            <?php } ?>
             </p>
             <ul class="list-unstyled text-small">
               <li><a href="https://project.cmi.hr.nl/2020_2021/game_maestro/" rel="noopener noreferrer" target="_blank" class="text-light font-weight-bold"><img class="socialicons pr-2" src="/content/logos/icon_internet.svg">Website</a></li>
@@ -81,11 +118,11 @@
         <br>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -93,7 +130,7 @@
             <p class="text-left text-light">
               Minor<br>
               C#<br>
-              3 maanden<br>
+              3 <?= $lang['months']; ?><br>
               Unity<br>
               Steam
             </p>
@@ -104,7 +141,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>

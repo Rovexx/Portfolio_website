@@ -7,7 +7,11 @@
       <div class="row">
         <div class="col">
           <h1>Katvis Evolutie</h1>
-          <h3>Leer over evolutie theorie doormiddel van een spelletje</h3>
+          <?php if ($_SESSION['lang'] == "nl") { ?>
+            <h3>Leer over evolutie theorie doormiddel van een spelletje</h3>
+          <?php } else { ?>
+            <h3>Learn about evolution theory through a game</h3>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -15,6 +19,7 @@
       <div class="container">
         <div class="row">
           <div class="col mt-3 text-light">
+          <?php if ($_SESSION['lang'] == "nl") { ?>
             <p>
               School gaf de opdracht aan mij en mijn team van 3 personen om een browser game te maken. 
               Deze game had een aantal eisen die willekeurig waren bepaald.
@@ -44,6 +49,37 @@
               Leer browsergames maken met een framework.<br>
               Game assets maken met Photoshop<br>
             </p>
+          <?php } else { ?>
+            <p>
+              School commissioned me and my team of 3 people to make a browser game.
+              This game had a number of requirements that were determined at random.
+              Our game had to be educational for the target group of primary school children aged 8 to 10 years.
+              The subject of the game had to be evolution and we had to use the scarcity learning method.
+              Then an X-factor has to be processed, this one was ins case: cats.<br>
+              <br>
+              <span class="font-weight-bold">concept</span><br>
+              With my team I asked children at a primary school in Rotterdam a number of questions in order to come up with a concept for a game.
+              I researched platforms to make the game in and that's how I came up with Phaser.<br>
+              The concept we came up with was to show the evolution of a fish. We then opted for a catfish to integrate the X factor in a fun way.<br>
+              In the game you have to eat other fish to evolve yourself.
+              You can evolve yourself in different areas and with each evolution you learn about what it does and what effect it has.
+              At the end of the game you see the fish go on land and turn into a cat. This is sort of a comparison of the organisms that went out of the ocean onto land.
+              When you have completed the game you unlock a bonus level where the fish swims in space. This was our easter egg.
+              <br>
+              <span class="font-weight-bold">My task</span><br>
+              I've been researching browser game frameworks. For example, I made a demo in Pixi.js and Phaser.js.<br>
+              After making the choice to use Phaser, I kept myself busy with the game logic and creating all assets.
+              I made different backgrounds for the game with Photoshop.<br>
+              For the game logic I wrote code to be able to evolve the fish,
+              collect points and make all external influences on the fish such as lives, temperature effects, depth effects etc.<br>
+              I also kept myself busy with the user interface and the HUD.
+            </p>
+            <h3>Learning objectives</h3>
+            <p>
+              Learn to make browser games with a framework.<br>
+              Create game assets with Photoshop<br>
+            </p>
+          <?php } ?>
           </div>
         </div>
         <!-- Images -->
@@ -95,11 +131,11 @@
         </div>
         <div class="row my-4">
           <div class="col">
-            <p class="font-weight-bolder text-right">
-              OPDRACHTGEVER<br>
-              PROGRAMMEER TAAL<br>
-              PROJECT DUUR<br>
-              PROGRAMMAS<br>
+            <p class="font-weight-bolder text-right text-uppercase">
+              <?= $lang['client']; ?><br>
+              <?= $lang['programmingLanguage']; ?><br>
+              <?= $lang['projectDuration']; ?><br>
+              <?= $lang['programs']; ?><br>
               PLATFORM
             </p>
           </div>
@@ -107,7 +143,7 @@
             <p class="text-left text-light">
               School<br>
               JavaScript<br>
-              1 kwartaal<br>
+              1 <?= $lang['quarter']; ?><br>
               Photoshop<br>
               Phaser
             </p>
@@ -118,7 +154,7 @@
     <div class="bg-dark">
       <br>
       <!-- Include footer -->
-      <?php include_once '../../includes/footer.html';?>
+      <?php include_once '../../includes/footer.php';?>
     </div>
     <!-- Include scripts -->
     <?php include_once '../../includes/scripts.html';?>
