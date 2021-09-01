@@ -76,7 +76,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="/content/projecten/school/city_overflow/city_overflow_1.png" class="d-block w-100">
+              <img src="/content/projecten/school/city_overflow/city_overflow_1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
               <img src="/content/projecten/school/city_overflow/city_overflow_2.jpg" class="d-block w-100">

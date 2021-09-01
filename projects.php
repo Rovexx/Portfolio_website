@@ -42,7 +42,7 @@
         </div>
         <div class="col-xl-4 col-md-6 col-sm-12 p-0 infobox">
           <a href="./projects/school/city_overflow.php?lang=<?= $_SESSION['lang'];?>">
-            <img src="./content/projecten/school/city_overflow/city_overflow_1.png" class="img-fluid" alt="Live inc">
+            <img src="./content/projecten/school/city_overflow/city_overflow_1.jpg" class="img-fluid" alt="Live inc">
             <div class="font-weight-bold text-left text-dark mx-1 mt-1">
               <h5>City Overflow</h5>
               <p>3D pc game tech demo</p>
