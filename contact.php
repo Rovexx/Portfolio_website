@@ -29,7 +29,11 @@
         </div>
         <div class="row mx-5">
           <div class="col-md text-center mb-3">
-            <a type="button" class="btn btn-outline-light btn-lg btn-block mb-3 text-light" href="/content/bestanden/CV_Roel_Versteeg.pdf" download>DOWNLOAD CV</a>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <a type="button" class="btn btn-outline-light btn-lg btn-block mb-3 text-light" href="/content/bestanden/CV Roel Versteeg.pdf" download>DOWNLOAD CV</a>
+            <?php } else { ?>
+              <a type="button" class="btn btn-outline-light btn-lg btn-block mb-3 text-light" href="/content/bestanden/CV Roel Versteeg english.pdf" download>DOWNLOAD CV</a>
+            <?php } ?>
             <a href="mailto:contact@rovex.nl" class="text-dark">contact@rovex.nl</a>
           </div>
         </div>
