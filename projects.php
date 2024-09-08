@@ -419,15 +419,30 @@
           <div class="spacer-tiny bg-blue mb-3"></div>
         </div>
         <div class="col-xl-4 col-md-6 col-sm-12 p-0 infobox">
+          <a href="./projects/misc/rail_route.php?lang=<?= $_SESSION['lang'];?>" class="infobox">
+            <img src="./content/projecten/misc/rail_route/rail_route_1.jpg" class="img-fluid" alt="Project">
+            <div class="font-weight-bold text-left text-dark mx-1 mt-1">
+              <h5>Rail Route</h5>
+              <p>
+              <?php if ($_SESSION['lang'] == "nl") { ?>
+                2D pc game
+              <?php } else { ?>
+                2D pc game
+              <?php } ?>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-4 col-md-6 col-sm-12 p-0 infobox">
           <a href="./projects/misc/quest_for_redemption.php?lang=<?= $_SESSION['lang'];?>" class="infobox">
             <img src="./content/projecten/misc/quest_for_redemption/quest_for_redemption_1.jpg" class="img-fluid" alt="Project">
             <div class="font-weight-bold text-left text-dark mx-1 mt-1">
               <h5>Quest for Redemption</h5>
               <p>
               <?php if ($_SESSION['lang'] == "nl") { ?>
-                MMO game in ontwikkeling
+                Onvoltooide MMO game
               <?php } else { ?>
-                MMO game in development
+                Unfinished MMO game
               <?php } ?>
               </p>
             </div>

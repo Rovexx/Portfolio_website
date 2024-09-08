@@ -114,6 +114,17 @@
           <h1 class="txt-blue-darker font-weight-bold text-uppercase"><?= $lang['experience']; ?></h1>
           <h2 class="txt-blue"><?= $lang['whereIWorked']; ?></h2>
           <p>
+            <span class="font-weight-bold">Aug. 2021 - Current</span><br>
+            <a href="https://railroute.eu/"><span style="color: #00a562;" class="font-weight-bold">Rail Route</span></a><br>
+            <?php if ($_SESSION['lang'] == "nl") { ?>
+              <span class="font-italic">Freelance game ontwikkelaar</span><br>
+              • Game programmeur / designer 2D pc game<br>
+            <?php } else { ?>
+              <span class="font-italic">Freelance game developer</span><br>
+              • Game programmer / designer 2D pc game<br>
+            <?php } ?>
+          </p>
+          <p>
             <span class="font-weight-bold">Feb. - Jun. | 2021</span><br>
             <a href="https://ultimaker.com/"><span style="color: #196ef0;" class="font-weight-bold">Ultimaker</span></a><br>
             <?php if ($_SESSION['lang'] == "nl") { ?>
@@ -189,7 +200,7 @@
             <h2 class="my-2">School</h2>
             <img src="/content/projecten/school/live_inc/header.png" class="img-fluid rounded" alt="Live Inc.">
             <p>Live Inc.</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#school?lang=<?= $_SESSION['lang'];?>"><?= $lang['more']; ?>
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php?lang=<?= $_SESSION['lang'];?>#school"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
@@ -202,7 +213,7 @@
             <?php } else { ?>
               <p>Go Kart</p>
             <?php } ?>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#misc?lang=<?= $_SESSION['lang'];?>"><?= $lang['more']; ?>
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php?lang=<?= $_SESSION['lang'];?>#misc"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
@@ -211,7 +222,7 @@
             <h2 class="my-2"><?= $lang['electronics']; ?></h2>
             <img src="/content/projecten/hardware/racing_dash/header.png" class="img-fluid rounded" alt="ClassroomVR">
             <p>Simpit dashboard</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#hardware?lang=<?= $_SESSION['lang'];?>"><?= $lang['more']; ?>
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php?lang=<?= $_SESSION['lang'];?>#hardware"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
@@ -220,7 +231,7 @@
             <h2 class="my-2"><?= $lang['3DPrinting']; ?></h2>
             <img src="/content/projecten/3d_printer/rovexyz/header.png" class="img-fluid rounded" alt="ClassroomVR">
             <p>3D printer</p>
-            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php#3D_print?lang=<?= $_SESSION['lang'];?>"><?= $lang['more']; ?>
+            <a type="button" class="btn btn-outline-primary btn-lg btn-block mb-3 text-dark text-uppercase" href="./projects.php?lang=<?= $_SESSION['lang'];?>#3D_print"><?= $lang['more']; ?>
               <i class="material-icons align-middle">more_horiz</i>
             </a>
           </div>
@@ -280,7 +291,7 @@
               <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
             </tr>
             <tr>
-              <th scope="row">C/C++</th>
+              <th scope="row">Arduino C/C++</th>
               <td><?= $lang['comfortable']; ?></td>
               <td>20 +</td>
               <td>School | <?= $lang['ownInterest']; ?></td>
@@ -314,6 +325,12 @@
               <td><?= $lang['average']; ?></td>
               <td>+/- 8</td>
               <td>School | <?= $lang['ownInterest']; ?> | <?= $lang['professional']; ?></td>
+            </tr>
+            <tr>
+              <th scope="row">Unreal Engine C++</th>
+              <td><?= $lang['basic']; ?></td>
+              <td>1</td>
+              <td><?= $lang['professional']; ?></td>
             </tr>
             <tr>
               <th scope="row">CSS</th>

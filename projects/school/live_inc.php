@@ -55,7 +55,7 @@
               Live Inc. is a 2 vs 2 multiplayer game set in the 80s. It involves 2 teams, the infiltrators who have to break into an office of the corporation Live Inc to collect evidence that the company has bad intentions.<br>
               The opposing team takes on the role of Live Inc.'s security and has to catch the opposing team.<br>
               <br>
-              <span class="font-weight-bold">Mijn taken</span><br>
+              <span class="font-weight-bold">My tasks</span><br>
               During this project I looked at how I could implement multiplayer in a Unity game. I chose to use SteamWorks and Mirror for this purpose.
               These are frameworks that make it possible to create a multiplayer game without having to host a server, or let your player do port-forwarding.<br>
               <br>
